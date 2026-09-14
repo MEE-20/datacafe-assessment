@@ -2,17 +2,18 @@
 
 import os
 import json
-import uvicorn
 from pathlib import Path
 from dotenv import load_dotenv
 
+# .env must be loaded BEFORE any other top-level imports that read env variables
+load_dotenv()
+
+import uvicorn
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 
 from src.orchestrator.graph import run_ask_pipeline
 from src.orchestrator.actions import ActionRequest, process_action_request
-
-load_dotenv()
 
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.0-flash")
