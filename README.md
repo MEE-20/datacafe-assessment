@@ -46,3 +46,7 @@ pip install -r requirements.txt
 ├── requirements.txt
 └── README.md
 ```
+
+## Live Endpoints (valid till 18 sept 2026 5pm)
+the assistant is deployed on AWS EC2 instance(free tier)
+http://65.2.35.190:8080/docs -- fastAPI swagger UI endpoint. It is accessible publically.
