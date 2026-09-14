@@ -51,3 +51,4 @@ pip install -r requirements.txt
 the assistant is deployed on AWS EC2 instance(free tier)
 http://65.2.35.190:8080/docs -- fastAPI swagger UI endpoint. It is accessible publically.
 https://drives-suffered-batman-headquarters.trycloudflare.com - https - redirectec through cloudflare.
+use: https://drives-suffered-batman-headquarters.trycloudflare.com/docs for proper UI testing
