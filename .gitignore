@@ -14,9 +14,6 @@ env/
 .env
 *.key
 
-# Data (raw data is tracked, cleaned data is generated)
-data_cleaned/
-reconciliation_report.json
 
 # IDE
 .vscode/

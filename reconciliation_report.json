@@ -1,0 +1,178 @@
+{
+  "national_fy26_primary_sales_total_inr": 1357631078.74,
+  "data_sources": {
+    "dim_geo": {
+      "raw_rows": 12,
+      "cleaned_rows": 12,
+      "columns": [
+        "territory_code",
+        "territory_name",
+        "region",
+        "state"
+      ]
+    },
+    "dim_sku": {
+      "raw_rows": 120,
+      "cleaned_rows": 120,
+      "columns": [
+        "sku_code",
+        "sku_name",
+        "brand",
+        "category",
+        "pack_size",
+        "mrp_inr"
+      ]
+    },
+    "dim_distributor": {
+      "raw_rows": 40,
+      "cleaned_rows": 40,
+      "columns": [
+        "distributor_id",
+        "distributor_name",
+        "territory_code",
+        "city"
+      ]
+    },
+    "fact_primary_sales": {
+      "raw_rows": 74880,
+      "cleaned_rows": 74880,
+      "columns": [
+        "week_start",
+        "sku_code",
+        "territory_code",
+        "units",
+        "value_inr",
+        "month"
+      ]
+    },
+    "fact_targets": {
+      "raw_rows": 720,
+      "cleaned_rows": 720,
+      "columns": [
+        "month",
+        "brand",
+        "region",
+        "target_value_inr"
+      ]
+    },
+    "promotions": {
+      "raw_rows": 40,
+      "cleaned_rows": 40,
+      "columns": [
+        "promo_id",
+        "sku_code",
+        "region",
+        "start_date",
+        "end_date",
+        "discount_pct",
+        "mechanic"
+      ]
+    },
+    "stockouts": {
+      "raw_rows": 520,
+      "cleaned_rows": 520,
+      "columns": [
+        "distributor_id",
+        "sku_code",
+        "week_start",
+        "region",
+        "days_out_of_stock"
+      ]
+    },
+    "promotion_baselines": {
+      "raw_rows": 40,
+      "cleaned_rows": 40,
+      "columns": [
+        "promo_id",
+        "sku_code",
+        "region",
+        "start_date",
+        "end_date",
+        "promo_avg_weekly_value",
+        "promo_avg_weekly_units",
+        "baseline_avg_weekly_value",
+        "baseline_avg_weekly_units",
+        "baseline_week_count",
+        "uplift_pct",
+        "insufficient_baseline"
+      ]
+    }
+  },
+  "reconciliation_mismatches": [],
+  "cleaned_data_columns": {
+    "dim_geo": [
+      "territory_code",
+      "territory_name",
+      "region",
+      "state"
+    ],
+    "dim_sku": [
+      "sku_code",
+      "sku_name",
+      "brand",
+      "category",
+      "pack_size",
+      "mrp_inr"
+    ],
+    "dim_distributor": [
+      "distributor_id",
+      "distributor_name",
+      "territory_code",
+      "city"
+    ],
+    "fact_primary_sales": [
+      "week_start",
+      "sku_code",
+      "territory_code",
+      "units",
+      "value_inr",
+      "month"
+    ],
+    "fact_targets": [
+      "month",
+      "brand",
+      "region",
+      "target_value_inr"
+    ],
+    "promotions": [
+      "promo_id",
+      "sku_code",
+      "region",
+      "start_date",
+      "end_date",
+      "discount_pct",
+      "mechanic"
+    ],
+    "stockouts": [
+      "distributor_id",
+      "sku_code",
+      "week_start",
+      "region",
+      "days_out_of_stock"
+    ],
+    "promotion_baselines": [
+      "promo_id",
+      "sku_code",
+      "region",
+      "start_date",
+      "end_date",
+      "promo_avg_weekly_value",
+      "promo_avg_weekly_units",
+      "baseline_avg_weekly_value",
+      "baseline_avg_weekly_units",
+      "baseline_week_count",
+      "uplift_pct",
+      "insufficient_baseline"
+    ]
+  },
+  "stockout_region_distribution_after_normalization": {
+    "North": 146,
+    "South": 136,
+    "West": 125,
+    "East": 113
+  },
+  "skus_never_in_stockouts": [
+    "BS-0107",
+    "BS-0202"
+  ]
+}
