@@ -28,7 +28,6 @@ GEMINI_MODEL = os.environ.get("GEMINI_MODEL")
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 MAX_TOOL_CALLS = 5
 
-print("gemini model", GEMINI_MODEL)
 
 # ---------------------------------------------------------------------------
 # Pydantic schema for tool parameters — used by the LLM
@@ -265,7 +264,7 @@ def _estimate_cost(in_tokens: int, out_tokens: int) -> float:
 # Debug logging
 # ---------------------------------------------------------------------------
 
-_DEBUG = os.environ.get("DEBUG_ASK", "1") in ("1", "true", "yes")
+_DEBUG = os.environ.get("DEBUG_ASK", "0") in ("1", "true", "yes")
 
 
 def _log(node: str, msg: str) -> None:
